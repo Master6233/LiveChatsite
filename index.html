@@ -1,9 +1,35 @@
-<!DOCTYPE html>
-<html>
-   <body>
-   
-     <h1>Start Chatting here.</h1>
-     <p>Start Chatting here.</p>
-   
-   </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Open Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center">
+    <div id="login-screen" class="card">
+      <h2>Enter Nickname</h2>
+      <input id="nickname" placeholder="Your nickname" maxlength="20" />
+      <button id="enterChat">Join Chat</button>
+    </div>
+
+    <div id="chat-screen" class="card" style="display:none;">
+      <div class="chat-header">
+        <h2>Open Chatroom</h2>
+        <button id="changeNick">Change Nick</button>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <input id="messageInput" placeholder="Type a message..." maxlength="500" />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- load our script as a module (so we can import Firebase SDK modules) -->
+  <script type="module" src="script.js"></script>
+</body>
 </html>
